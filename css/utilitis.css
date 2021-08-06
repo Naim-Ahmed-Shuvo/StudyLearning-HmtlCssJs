@@ -1,0 +1,51 @@
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+.carouel-button {
+    display: flex;
+}
+.carouel-button button{
+    background: rgb(204, 203, 203);
+    outline: 0px;
+    border: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;  
+    background-color: #fff;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    transition: all .3s ease-in-out;
+}
+.carouel-button button:hover{
+    box-shadow: 2px 2px 10px var(--primary-black);
+    cursor: pointer;
+}
+
+.primary-button{
+padding: 6px 21px;
+border: none;
+outline: none;
+background: var(--primary-color);
+color: var(--primary-white);
+border-top-left-radius: 10px;
+border-bottom-right-radius: 10px;
+font-family: "Poppins", sans-serif;
+text-transform: capitalize;
+transition: all .3s ease-in;
+box-shadow: 2px 2px 4px var(--primary-black);
+}
+
+.primary-button:hover{
+box-shadow: 2px 2px 10px var(--primary-black);
+cursor: pointer
+}
