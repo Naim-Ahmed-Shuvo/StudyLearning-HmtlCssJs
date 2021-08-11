@@ -19,7 +19,7 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     /* background: #F7F0FA; */
-    background-image: linear-gradient(to bottom, #ffff,#DECEF4, #E9DEF7);
+    /* background-image: linear-gradient(to bottom, #ffff,#DECEF4, #E9DEF7); */
 }
 
 a{
@@ -30,111 +30,134 @@ ul,li{
 }
 
 /* nav */
-.nav{
-   display: flex;
-   justify-content: center;
-}
-.nav .flex{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav{
     position: fixed;
     top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999999999999;
 }
-.nav .hambar-menu{
-    display: none;
+nav.sticky{
+    background-color: #F6F1FC;
 }
-.nav-ul-button{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+nav .flex{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center;
 }
-.nav .nav-ul-button ul{
+nav .logo{
     display: flex;
-    flex: 0.6;
-    margin-right: 40px;
+align-items: center;
+margin-top: 14px;
 }
-
-.nav .nav-ul-button ul li{
-    margin: 20px;
-    font-family: 'Open Sans', sans-serif;
-   
+nav .nav-links{
+    display: flex;
+    align-items: center;
 }
-.nav .nav-ul-button ul li a{
+nav .nav-links ul{
+    display: flex;
+    align-items: center;
+}
+nav .nav-links ul li{
+    margin: 0 12px;
+}
+nav .nav-links ul li a{
+    font-family: "Poppins",sans-serif;
     font-size: 16px;
-    color: #212121;
-    text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: 1;
+    color: #646464;
     transition: all .3s ease-in-out;
 }
-.nav .nav-ul-button ul li:hover a{
-    font-weight: 700;
+nav .nav-links ul li a:hover{
+   font-size: 18px;
+   color: #212121;
 }
-.nav .nav-ul-button button{
-   padding: 8px 45px;
-   background-color: var(--primary-color);
-   outline: 0px;
-   border: 0px;
-   color: #fff;
-   border-bottom-right-radius: 20px;
-   border-top-left-radius: 20px;
-   box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-   font-family: 'Open Sans', sans-serif;
-   font-size: 16px;
-   font-weight: 400;
-   transition: all .3s ease-in-out;
+nav .nav-links button{
+    padding: 6px 21px;
+border: none;
+outline: none;
+background: var(--primary-color);
+color: var(--primary-white);
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+font-family: "Poppins", sans-serif;
+text-transform: capitalize;
+transition: all .3s ease-in;
+box-shadow: 2px 2px 4px var(--primary-black);
+margin-left: 30px;
 }
-
-.nav .nav-logo{
-    height: 47px;
-    width: 151px;
-    margin-right: 85px;
-
-}
-
-.nav .nav-ul-button button:hover{
-    box-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+nav .nav-links button:hover{
     cursor: pointer;
+    box-shadow: 2px 2px 10px var(--primary-black);;
 }
-.hambar-menu i{
-  color: var(--primary-black);
+nav .mobile-menu{
+    display: none;
+    cursor: pointer;
+    height: 37px;
+    width: 37px;
+    align-items: center;
+    justify-content: center;
 }
-.hambar-menu:hover{
-    cursor: pointer !important;
+
+/* burgur-menu design */
+nav .mobile-menu .menu-btn-burger{
+    width: 35px;
+    height: 3px;
+    background-color: var(--primary-black);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
 }
-.mobile-nav{
-  display: none;
-  margin-top: 100px;
-  position: sticky;
-  top: 200px;
-  z-index: 10000000;
+nav .mobile-menu .menu-btn-burger::after,nav .mobile-menu .menu-btn-burger::before{
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 3px;
+    background-color: var(--primary-black);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
 }
-.mobile-nav .mobile-nav-ul ul{
-    display: flex;
-    justify-content: space-around;
-    font-size: 16px;
-    color: #212121;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all .3s ease-in-out;
+nav .mobile-menu .menu-btn-burger::after{
+    transform: translateY(-10px);
 }
-.mobile-nav .mobile-nav-ul ul a{
-    font-size: 16px;
-    color: #212121;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all .3s ease-in-out;
+nav .mobile-menu .menu-btn-burger::before{
+    transform: translateY(10px);
 }
-.mobile-nav .mobile-nav-ul ul a:hover{
-    font-weight: 700;
+/* burgur-menu animation */
+.mobile-menu.open .menu-btn-burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+.mobile-menu.open .menu-btn-burger::before{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+.mobile-menu.open .menu-btn-burger::after{
+    transform: rotate(-45deg) translate(35px,35px);
 }
 /* nav./ */
 
+/* mobile-nav */
+.mobile-navv {
+     display: none;
+}
+.mobile-navv ul{
+    display: grid;
+}
+.mobile-navv ul li{
+    transition: all .5s ease-in-out;
+}
+.mobile-navv ul li:hover{
+    transform: translateX(20px);
+}
+/* mobile-nav./ */
+
 /* hero */
 .hero{
-  padding: 65px 0px;
-  margin-top: 119px;
+  margin-top: 210px;
+  margin-bottom: 50px;
 }
 
 .hero .grid{

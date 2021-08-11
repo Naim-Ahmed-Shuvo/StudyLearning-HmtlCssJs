@@ -13,78 +13,48 @@
   </head>
   <body>
     <!-- nav -->
-    <div class="nav">
-      <div class="container flex">
-        <div class="nav-logo">
-          <img src="./images/nav-logo.png" alt="" />
-        </div>
-        <div class="nav-ul-button">
-          <ul>
-            <li>
-              <a href="#hero">Home</a>
-            </li>
-            <li>
-              <a href="#classes">Classes</a>
-            </li>
-            <li>
-              <a href="#intro">Services</a>
-            </li>
-            <li>
-              <a href="#studily-goals">about</a>
-            </li>
-            <li>
-              <a href="#contact">contact</a>
-            </li>
-            <li>
-              <a href="#testimonial">community</a>
-            </li>
-            <li>
-              <a href="#">login</a>
-            </li>
-          </ul>
-
-          <div>
-            <button>Sign Up</button>
+     <nav id="nav">
+       <div class="container main-nav flex">
+          <div class="logo">
+            <img src="./images/nav-logo.png" alt="logo">
           </div>
-         
-        </div>
-
-        <div class="hambar-menu" id="hambar-menu">
-          <i class="fas fa-bars"></i>
-        </div>
-       
-      </div>
-    </div>
-    <!-- nav./ -->
-    <!-- mobile-nav -->
-       <section class="mobile-nav" id="mobile-nav">
-          <div class="container mobile-nav-ul">
+          <div class="nav-links">
             <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Classes</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">about</a>
-              </li>
-              <li>
-                <a href="#">contact</a>
-              </li>
-              <li>
-                <a href="#">community</a>
-              </li>
-              <li>
-                <a href="#">login</a>
-              </li>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">CLASSES</a></li>
+              <li><a href="#">SERVICES</a></li>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">COMMUNITY</a></li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#">LOGIN</a></li>
             </ul>
+             <button>Sign Up</button>
+
+             <div class="mobile-menu">
+                <div class="menu-btn-burger">
+              
+                </div>
+             </div>
           </div>
-       </section>
-    <!-- mobile-nav./ -->
+       </div>
+        <!-- mobile-nav -->
+        <div class="mobile-navv">
+          <div class="container mobile-nav-grid">
+             <ul>
+               <li><a href="#">HOME</a></li>
+               <li><a href="#">CLASSES</a></li>
+               <li><a href="#">SERVICES</a></li>
+               <li><a href="#">ABOUT</a></li>
+               <li><a href="#">COMMUNITY</a></li>
+               <li><a href="#">CONTACT</a></li>
+               <li><a href="#">LOGIN</a></li>
+             </ul>
+          </div>
+          </div>
+       <!-- mobile-nav./ -->
+     </nav>
+    <!-- nav./ -->
+   
     <!-- hero -->
     <section class="hero" id="hero">
       <div class="container grid">
@@ -469,6 +439,7 @@
       </div>
     </footer>
 
+    <script src="js/jquery.min.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>
